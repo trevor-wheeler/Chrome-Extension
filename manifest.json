@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Short-form Content Removal Tool",
+    "short_name": "Remover",
+    "version": "1.0.0",
+    "description": "Remove Instagram Reels and Youtube Shorts",
+    "icons": {
+        "48": "icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.instagram.com/*"
+            ],
+            "js": [
+                "instagram.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": [
+                "youtube.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://www.youtube.com/",
+        "https://www.instagram.com/"
+    ]
+}
