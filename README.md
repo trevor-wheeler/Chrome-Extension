@@ -1,19 +1,5 @@
 # Short-form Content Removal Tool
 #### Video Demo:  <https://www.youtube.com/watch?v=ej5fKXtoeTA>
+#### Download:  <https://www.youtube.com/watch?v=ej5fKXtoeTA>
 #### Description:
-For my final project I decided to make a chrome extension that gives you the ability to toggle on and off short form content from a couple different websites. This is something I have been wanting to make for a while now even before I started coding because I get distracted easily. I'm hoping that this chrome extension will help me manage my time better on sites like instagram and youtube so that I can spend my time on other things that are more important to me.
-
-This chrome extension consists of seven different files. One JSON file, one HTML file, one CSS file, one image file, and three JavaScript files. I am going to explain the role of each one of these files besides the image file because that is just used for the chrome extension icon.
-
-Starting with the JSON file, this file is for telling the chrome extension what its purpose is and any other important specifications. In this file I specify that the chrome extension needs access to user storage. This is so I can save the users settings across different devices. Then I specify that this chrome extension needs to be able to interact with the websites, "https://www.youtube.com/" and "https://www.instagram.com/" through host permissions. This is essential in giving the chrome extension permission to change elements on a webpage. Finally I match my content scripts to their proper websites. This is so the chrome extension knows which website to execute the right content script on.
-
-Moving on to the HTML file, this is what will pop up when you open the chrome extension. I decided to use my HTML file as the options page for my chrome extension. inside this file I create two checkbox elements that are toggled on by default. These will be used to toggle on and off certain elements of a website. I also include a donate button that links to a stripe page.
-
-The next file is a CSS file for the previous HTML file, this file specifies the style for the elements in popup.html. It's pretty self explanatory but this file basically includes 4 classes and one type selector. the type selector changes the background color of the body in the html file and the .btn class changes the color of a bootstrap button to have a really cool gradient. the rest of the classes are just used for centering and positioning elements.
-
-Then we got the JavaScript file for that last html file, this file is where all the logic is stored for the checkboxes in popup.html. first it listens to make sure all the content is loaded then it it checks the storage to see if there's any previously saved data and updates the checkboxes accordingly. Next it listens for a change event from the checkboxes and if there is one it stores the data of that change in the chrome storage.
-
-Finally we have the last two JavaScript files, these files are basically the same so I am just going to explain them both as one. These files are called content scripts they're used to inject code on websites specified in the manifest.json file. In these content scripts I create a function called removecontent that checks the chrome storage for data and either adds or removes a "hidden" attribute on a specified element based on that data. I also add a MutationObserver that will rerun the removecontent function if any changes are made to the webpage. This is to assure that the changes made to the website will still be there even if the navbar is collapsed or if the user navigates to another page. At the end of the script I also add a listener to rerun the removecontent function if it detected a change in the chrome storage. This is so the website can update in real time when the checkboxes in popup.html are toggled.
-
-That's basically it. Thank you for reading.
-
+A chrome extension that gives you the ability to toggle on and off short form content from Instagram and YouTube.
