@@ -1,14 +1,36 @@
 // main script
 function removecontent() {
-    var nav = document.querySelector(".x1iyjqo2.xh8yej3:not(.x1n2onr6)");
-chrome.storage.sync.get(['reels'], function(data) {
-    if (data.reels == true) {
-        nav.children[2].setAttribute("hidden", "");
-        nav.children[3].setAttribute("hidden", "");
+
+    try {
+        var explore = document.querySelector(".x1iyjqo2.xh8yej3:not(.x1n2onr6)").children[2];
     }
-    else if (nav.children[2].hasAttribute("hidden")) {
-        nav.children[2].removeAttribute("hidden");
-        nav.children[3].removeAttribute("hidden");
+    catch (error) {
+        explore = undefined;
+    }
+
+    try {
+        var reels = document.querySelector(".x1iyjqo2.xh8yej3:not(.x1n2onr6)").children[3]; 
+    }
+    catch (error) {
+        reels = undefined;
+    }
+
+chrome.storage.sync.get(['reels'], function(data) {
+    if (data.reels != false) {
+        if (explore != undefined) {
+            explore.setAttribute("hidden", "");
+        }
+        if (reels != undefined) {
+            reels.setAttribute("hidden", "");
+        }
+    }
+    else {
+        if (explore != undefined && explore.hasAttribute("hidden")) {
+            explore.removeAttribute("hidden");
+        }
+        if (reels != undefined && reels.hasAttribute("hidden")) {
+            reels.removeAttribute("hidden");
+        }
     }
 });
 }

@@ -25,7 +25,7 @@ function removecontent() {
 
 chrome.storage.sync.get(['shorts'], function(data) {
     
-    if (data.shorts == true) {
+    if (data.shorts != false) {
         if (nav != undefined) {
             nav.setAttribute("hidden", "");
         }
