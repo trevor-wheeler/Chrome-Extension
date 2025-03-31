@@ -1,3 +1,5 @@
+/* General Elements / Homepage */
+
 body {
     background-color: #212121;
     color: #b4b4b4;
@@ -20,15 +22,23 @@ body {
 
 #version {
     position: absolute;
-    font-size: 10;
-    right: 67px;
-    top: 12px;
+    font-size: 10 !important;
+    right: 60px;
+    top: 17px;
     color: #ececec;
 }
 
 main {
     margin: 10px;
     margin-top: 0 !important; 
+}
+
+#home {
+    display: none;
+}
+
+.page {
+    height: 150px !important;
 }
 
 hr {
@@ -81,7 +91,7 @@ hr {
     transition: color 0.2s ease-in-out;
 }
 
-.website-tile:hover, .more-tile:hover {
+.website-tile:hover, .more-tile:hover, .option-tile:hover, .back-btn:hover {
     color: #ececec;
     transition: color 0.2s ease-in-out;
 }
@@ -115,4 +125,104 @@ hr {
     margin-top: 10px;
     padding-bottom: 5px;
     display: flex;
+}
+
+/* YouTube Page */
+
+.options-list {
+    list-style-type: none;
+    padding: 0 !important;
+    display: flex;
+    margin: 0 !important;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.option-tile {
+    position: relative;
+    padding-inline: 10px;
+    padding-block: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #171717;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1rem;
+    user-select: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.title {
+    padding-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+}
+
+#youtube {
+    display: none;
+}
+
+#instagram {
+    display: none;
+}
+
+#facebook {
+    display: none;
+}
+
+.back-btn {
+    display: flex;
+    cursor: pointer;
+}
+
+.back {
+    margin-right: 2px;
+}
+
+.form-check {
+    min-height: 0px !important;
+}
+
+.form-switch {
+    padding-left: 2.5em;
+    margin-right: calc(-1em + 10px);
+
+}
+
+.form-switch .form-check-input {
+    width: 25px !important;
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23424242'/%3e%3c/svg%3e");
+}
+
+.form-check-input:checked {
+    background-color: #e43131 !important;
+    border: none !important;
+}
+
+.form-switch .form-check-input:checked {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ececec'/%3e%3c/svg%3e");
+}
+
+.form-check-input {
+    border: none !important;
+    pointer-events: none !important;
+}
+
+
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+
+.form-check-input:active {
+    filter: none !important;
+}
+
+.form-check-input {
+    background-color: #2f2f2f !important;
+}
+
+.open {
+    display: block !important;
 }
