@@ -1,28 +1,118 @@
 body {
-    /* background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); */
-    background-color: #212529;
-    color:whitesmoke;
-    margin: 25px;
+    background-color: #212121;
+    color: #b4b4b4;
+    padding: 0 !important;
+    width: 200px !important;
 }
 
-.btn {
-    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-    --bs-btn-hover-color: #212529;
-    --bs-btn-border-color: #212529;
-    --bs-btn-hover-border-color: #6c757d;
-}
-
-.form-switch .form-check-input {
-    margin-top: 1em;
-}
-
-.centertext {
-    text-align: center;
-}
-
-.center {
+#header {
+    width: 100%;
+    padding-left: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-block: 10px;
+    background: #171717;
+}
+
+#logo {
+    position: absolute;
+    right: 10px;
+}
+
+#version {
+    position: absolute;
+    font-size: 10;
+    right: 67px;
+    top: 12px;
+    color: #ececec;
+}
+
+main {
+    margin: 10px;
+    margin-top: 0 !important; 
+}
+
+hr {
+    padding: 0;
     margin: 0;
+}
+
+#website-list {
+    list-style-type: none;
+    padding: 0 !important;
+    display: flex;
+    margin: 0 !important;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#more-list {
+    list-style-type: none;
+    padding: 0 !important;
+    display: flex;
+    margin: 0 !important;
+    gap: 5px;
+}
+
+.more-tile {
+    padding-inline: 10px;
+    padding-block: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #171717;
+    border-radius: 10px;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.website-tile {
+    position: relative;
+    padding-inline: 10px;
+    padding-block: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #171717;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.website-tile:hover, .more-tile:hover {
+    color: #ececec;
+    transition: color 0.2s ease-in-out;
+}
+
+.more-tile.donate {
+    flex-grow: 1;
+}
+
+.bi {
+    margin-right: 10px;
+}
+
+.more-btn {
+    margin: 0 !important;
+}
+
+.arrow {
+    margin: 0 !important;
+    position: absolute;
+    right: 10px;
+}
+
+.label-icon {
+    margin: 0 !important;
+    position: absolute;
+    right: 20px;
+}
+
+.label {
+    padding-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
 }

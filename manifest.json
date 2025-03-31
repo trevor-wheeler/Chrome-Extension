@@ -13,24 +13,6 @@
     "permissions": [
         "storage"
     ],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://www.instagram.com/*"
-            ],
-            "js": [
-                "instagram.js"
-            ]
-        },
-        {
-            "matches": [
-                "https://www.youtube.com/*"
-            ],
-            "js": [
-                "youtube.js"
-            ]
-        }
-    ],
     "host_permissions": [
         "https://www.youtube.com/",
         "https://www.instagram.com/"
