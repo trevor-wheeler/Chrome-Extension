@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navBtns.forEach(navBtn => {
         navBtn.addEventListener('click', () => {
-            navigate('home', navBtn.dataset.page);
+            navigate(navBtn.dataset.pageClose, navBtn.dataset.pageOpen);
         });
     });
 
@@ -14,14 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
     option.addEventListener('click', () => {
         const checkbox = option.querySelector('.form-check-input');
         
-        console.log(checkbox);
-        
         checkbox.checked = !checkbox.checked;
     });
    });
 });
 
 function navigate(close, open) {
-    document.getElementById(close).classList.toggle('open');
-    document.getElementById(open).classList.toggle('open');
+
+    if (close === 'home') {
+        document.getElementById(close).style.transform = 'translateX(-200px)';
+        document.getElementById(open).style.transform = 'translateX(-200px)';
+    }
+    else {
+        document.getElementById(close).style.transform = 'translateX(0px)';
+        document.getElementById(open).style.transform = 'translateX(0px)';
+    }
 }

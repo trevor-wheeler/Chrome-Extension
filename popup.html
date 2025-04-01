@@ -16,95 +16,97 @@
     </div>
 
     <main>
-        <!-- Home Page -->
-        <div id="home" class="page open">
-            <span class="label">Configuration <i class="bi bi-toggles2 label-icon"></i></span>
-            <ul id="website-list">
-                <li class="website-tile nav-btn" data-page="youtube"><i class="bi bi-youtube"></i>YouTube<i class="arrow bi bi-caret-right"></i></li>
-                <li class="website-tile nav-btn" data-page="instagram"><i class="bi bi-instagram"></i>Instagram<i class="arrow bi bi-caret-right"></i></li>
-                <li class="website-tile nav-btn" data-page="facebook"><i class="bi bi-facebook"></i>Facebook<i class="arrow bi bi-caret-right"></i></li>
-            </ul>
-        </div>
-        <!-- YouTube Page -->
-        <div id="youtube" class="page">
-            <span class="title">
-                <div class="back-btn nav-btn" data-page="youtube"><i class="bi bi-caret-left back"></i>Back</div>
-                <i class="bi bi-youtube label-icon"></i>
-            </span>
-            <ul class="options-list">
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube1" checked>
-                    </div>
-                    Option 1
-                </li>
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube2" checked>
-                    </div>
-                    Option 2
-                </li>
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube3" checked>
-                    </div>
-                    Option 3
-                </li>
-            </ul>
-        </div>
-        <!-- Instagram Page -->
-        <div id="instagram" class="page">
-            <span class="title">
-                <div class="back-btn nav-btn" data-page="instagram"><i class="bi bi-caret-left back"></i>Back</div>
-                <i class="bi bi-instagram label-icon"></i>
-            </span>
-            <ul class="options-list">
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube1" checked>
-                    </div>
-                    Option 1
-                </li>
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube2" checked>
-                    </div>
-                    Option 2
-                </li>
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube3" checked>
-                    </div>
-                    Option 3
-                </li>
-            </ul>
-        </div>
-        <!-- Facebook Page -->
-        <div id="facebook" class="page">
-            <span class="title">
-                <div class="back-btn nav-btn" data-page="facebook"><i class="bi bi-caret-left back"></i>Back</div>
-                <i class="bi bi-facebook label-icon"></i>
-            </span>
-            <ul class="options-list">
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube1" checked>
-                    </div>
-                    Option 1
-                </li>
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube2" checked>
-                    </div>
-                    Option 2
-                </li>
-                <li class="option-tile">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="youtube3" checked>
-                    </div>
-                    Option 3
-                </li>
-            </ul>
+        <div class="page-container">
+            <!-- Home Page -->
+            <div id="home" class="page open">
+                <span class="label">Configuration <i class="bi bi-toggles2 label-icon"></i></span>
+                <ul id="website-list">
+                    <li class="website-tile nav-btn" data-page-close="home" data-page-open="youtube"><i class="bi bi-youtube"></i>YouTube<i class="arrow bi bi-caret-right"></i></li>
+                    <li class="website-tile nav-btn" data-page-close="home" data-page-open="instagram"><i class="bi bi-instagram"></i>Instagram<i class="arrow bi bi-caret-right"></i></li>
+                    <li class="website-tile nav-btn" data-page-close="home" data-page-open="facebook"><i class="bi bi-facebook"></i>Facebook<i class="arrow bi bi-caret-right"></i></li>
+                </ul>
+            </div>
+            <!-- YouTube Page -->
+            <div id="youtube" class="page">
+                <span class="title">
+                    <div class="back-btn nav-btn" data-page-close="youtube" data-page-open="home"><i class="bi bi-caret-left back"></i>Back</div>
+                    <i class="bi bi-youtube label-icon"></i>
+                </span>
+                <ul class="options-list">
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube1" checked>
+                        </div>
+                        Option 1
+                    </li>
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube2" checked>
+                        </div>
+                        Option 2
+                    </li>
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube3" checked>
+                        </div>
+                        Option 3
+                    </li>
+                </ul>
+            </div>
+            <!-- Instagram Page -->
+            <div id="instagram" class="page">
+                <span class="title">
+                    <div class="back-btn nav-btn" data-page-close="instagram" data-page-open="home"><i class="bi bi-caret-left back"></i>Back</div>
+                    <i class="bi bi-instagram label-icon"></i>
+                </span>
+                <ul class="options-list">
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube1" checked>
+                        </div>
+                        Option 1
+                    </li>
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube2" checked>
+                        </div>
+                        Option 2
+                    </li>
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube3" checked>
+                        </div>
+                        Option 3
+                    </li>
+                </ul>
+            </div>
+            <!-- Facebook Page -->
+            <div id="facebook" class="page">
+                <span class="title">
+                    <div class="back-btn nav-btn" data-page-close="facebook" data-page-open="home"><i class="bi bi-caret-left back"></i>Back</div>
+                    <i class="bi bi-facebook label-icon"></i>
+                </span>
+                <ul class="options-list">
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube1" checked>
+                        </div>
+                        Option 1
+                    </li>
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube2" checked>
+                        </div>
+                        Option 2
+                    </li>
+                    <li class="option-tile">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="youtube3" checked>
+                        </div>
+                        Option 3
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <span class="label">More <i class="bi bi-three-dots-vertical label-icon"></i></span>

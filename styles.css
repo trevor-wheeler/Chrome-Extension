@@ -33,12 +33,11 @@ main {
     margin-top: 0 !important; 
 }
 
-#home {
-    display: none;
-}
-
 .page {
     height: 150px !important;
+    width: 100%;
+    position: absolute;
+    transition: transform 0.2s ease;
 }
 
 hr {
@@ -117,6 +116,10 @@ hr {
 .label-icon {
     margin: 0 !important;
     position: absolute;
+    right: 10px;
+}
+
+.bi-three-dots-vertical {
     right: 20px;
 }
 
@@ -161,15 +164,15 @@ hr {
 }
 
 #youtube {
-    display: none;
+    right: -200px;
 }
 
 #instagram {
-    display: none;
+    right: -200px;
 }
 
 #facebook {
-    display: none;
+    right: -200px;
 }
 
 .back-btn {
@@ -197,7 +200,7 @@ hr {
 }
 
 .form-check-input:checked {
-    background-color: #e43131 !important;
+    background-color: #3f3f3f !important;
     border: none !important;
 }
 
@@ -225,4 +228,10 @@ hr {
 
 .open {
     display: block !important;
+}
+
+.page-container {
+    height: 160px;
+    width: 100%;
+    position: relative;
 }
