@@ -5,6 +5,10 @@ body {
     color: #b4b4b4;
     padding: 0 !important;
     width: 200px !important;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 #header {
@@ -115,6 +119,7 @@ main {
     margin-top: 10px;
     padding-bottom: 5px;
     display: flex;
+    user-select: none;
 }
 
 /* Other Pages */
@@ -141,6 +146,7 @@ main {
     user-select: none;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
+    font-weight: 400;
 }
 
 .title {
@@ -157,14 +163,11 @@ main {
 .back-btn {
     display: flex;
     cursor: pointer;
+    user-select: none;
 }
 
 .back {
     margin-right: 2px;
-}
-
-.open {
-    display: block !important;
 }
 
 .page-container {
