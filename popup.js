@@ -11,10 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
    options.forEach(option => {
+    const checkbox = option.querySelector('.form-check-input');
+
+    if (!checkbox.checked) {
+        option.classList.toggle('option-disabled');
+    }
+
     option.addEventListener('click', () => {
-        const checkbox = option.querySelector('.form-check-input');
         
         checkbox.checked = !checkbox.checked;
+        option.classList.toggle('option-disabled');
     });
    });
 });

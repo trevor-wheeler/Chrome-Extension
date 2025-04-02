@@ -235,3 +235,11 @@ hr {
     width: 100%;
     position: relative;
 }
+
+.option-disabled {
+    color: #555555;
+}
+
+.option-disabled:hover {
+    color: #8b8b8b;
+}
