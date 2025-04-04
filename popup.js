@@ -39,6 +39,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Select the corresponding toggle switch/checkbox
     const checkbox = option.querySelector('.form-check-input');
 
+    // Check local storage for option state
+    chrome.storage.sync.get([checkbox.dataset.option], data => {
+      // If option state is true check the checkbox
+      if (data[checkbox.dataset.option]) {
+        checkbox.checked = true;
+      }
+      // If option state is not yet stored in local storage, set the option state in local storage to default state
+      else if (data[checkbox.dataset.option] === undefined) {
+        chrome.storage.sync.set({[checkbox.dataset.option]: checkbox.checked});
+      }
+      // If option state is false uncheck the checkbox
+      else {
+        checkbox.checked = false;
+      }
+    });
+
     // If the option is disabled apply the correct styling
     if (!checkbox.checked) {
       option.classList.toggle('option-disabled');
@@ -46,8 +62,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // When clicked
     option.addEventListener('click', () => {
-      // Flip the toggle switch
-      checkbox.checked = !checkbox.checked;
+      // If checkbox is checked uncheck it and update state in local storage/vice versa 
+      if (checkbox.checked) {
+        checkbox.checked = false;
+        chrome.storage.sync.set({[checkbox.dataset.option]: false});
+      } else {
+        checkbox.checked = true;
+        chrome.storage.sync.set({[checkbox.dataset.option]: true});
+      }
       // Toggle styling
       option.classList.toggle('option-disabled');
     });
