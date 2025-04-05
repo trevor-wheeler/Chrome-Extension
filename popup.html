@@ -13,6 +13,7 @@
   <!-- External Files -->
   <link href="styles.css" rel="stylesheet">
   <script src="popup.js"></script>
+  <script src="/scripts/utils.js"></script>
   <title>Focus - Short Form Content Blocker</title>
 </head>
 <body>
@@ -41,19 +42,19 @@
         <ul class="options-list">
           <li class="option-tile">
             <div class="form-check form-switch">
-              <input class="form-check-input" data-option="yt-shorts-page" type="checkbox" role="switch" id="youtube1" checked>
+              <input class="form-check-input" data-option="yt-shorts-home" type="checkbox" role="switch" id="youtube1">
+            </div>
+            Shorts
+          </li>
+          <li class="option-tile">
+            <div class="form-check form-switch">
+              <input class="form-check-input" data-option="yt-shorts-page" type="checkbox" role="switch" id="youtube2">
             </div>
             Shorts Page
           </li>
           <li class="option-tile">
             <div class="form-check form-switch">
-              <input class="form-check-input" data-option="yt-shorts-home" type="checkbox" role="switch" id="youtube2" checked>
-            </div>
-            Shorts on Home
-          </li>
-          <li class="option-tile">
-            <div class="form-check form-switch">
-              <input class="form-check-input" data-option="yt-shorts-search" type="checkbox" role="switch" id="youtube3" checked>
+              <input class="form-check-input" data-option="yt-shorts-search" type="checkbox" role="switch" id="youtube3">
             </div>
             Shorts in Search
           </li>
@@ -68,13 +69,13 @@
         <ul class="options-list">
           <li class="option-tile">
             <div class="form-check form-switch">
-              <input class="form-check-input" data-option="ig-reel-page" type="checkbox" role="switch" id="youtube1" checked>
+              <input class="form-check-input" data-option="ig-reel-page" type="checkbox" role="switch" id="youtube1">
             </div>
             Reel Page
           </li>
           <li class="option-tile">
             <div class="form-check form-switch">
-              <input class="form-check-input" data-option="ig-explore-page" type="checkbox" role="switch" id="youtube2" checked>
+              <input class="form-check-input" data-option="ig-explore-page" type="checkbox" role="switch" id="youtube2">
             </div>
             Explore Page
           </li>
@@ -95,13 +96,13 @@
         <ul class="options-list">
           <li class="option-tile">
             <div class="form-check form-switch">
-              <input class="form-check-input" data-option="fb-reel-page" type="checkbox" role="switch" id="youtube1" checked>
+              <input class="form-check-input" data-option="fb-reel-page" type="checkbox" role="switch" id="youtube1">
             </div>
             Reel page
           </li>
           <li class="option-tile">
             <div class="form-check form-switch">
-              <input class="form-check-input" data-option="fb-reels-home" type="checkbox" role="switch" id="youtube2" checked>
+              <input class="form-check-input" data-option="fb-reels-home" type="checkbox" role="switch" id="youtube2">
             </div>
             Reels on Home
           </li>

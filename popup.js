@@ -1,5 +1,5 @@
 // Wait until content is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
 
   // Variables
   const options = document.querySelectorAll('.option-tile');
@@ -39,30 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Select the corresponding toggle switch/checkbox
     const checkbox = option.querySelector('.form-check-input');
 
-    // Check local storage for option state
-    chrome.storage.sync.get([checkbox.dataset.option], data => {
-      // If option state is true check the checkbox
-      if (data[checkbox.dataset.option]) {
-        checkbox.checked = true;
-      }
-      // If option state is not yet stored in local storage, set the option state in local storage to default state
-      else if (data[checkbox.dataset.option] === undefined) {
-        chrome.storage.sync.set({[checkbox.dataset.option]: checkbox.checked});
-      }
-      // If option state is false uncheck the checkbox
-      else {
-        checkbox.checked = false;
-      }
-    });
-
-    // If the option is disabled apply the correct styling
-    if (!checkbox.checked) {
-      option.classList.toggle('option-disabled');
-    }
-
     // When clicked
     option.addEventListener('click', () => {
-      // If checkbox is checked uncheck it and update state in local storage/vice versa 
+      // If checkbox is checked, uncheck it and update state in local storage/vice versa 
       if (checkbox.checked) {
         checkbox.checked = false;
         chrome.storage.sync.set({[checkbox.dataset.option]: false});
@@ -71,7 +50,32 @@ document.addEventListener('DOMContentLoaded', function() {
         chrome.storage.sync.set({[checkbox.dataset.option]: true});
       }
       // Toggle styling
-      option.classList.toggle('option-disabled');
+      toggleOptionStyling(checkbox.checked, option);
+    });
+
+    // Check local storage for option state
+    chrome.storage.sync.get([checkbox.dataset.option], data => {
+      // If option state is true check the checkbox
+      if (data[checkbox.dataset.option] === true) {
+        checkbox.checked = true;
+      }
+      // If option state is false uncheck the checkbox
+      else if (data[checkbox.dataset.option] === false) {
+        checkbox.checked = false;
+      }
+      // If option state is not yet stored in local storage, or is an invalid value
+      else {
+        // Set the option state in local storage to default state
+        window.getDefaultState(checkbox.dataset.option).then(state => {
+          chrome.storage.sync.set({[checkbox.dataset.option]: state});
+          // Toggle the checkbox accordingly
+          checkbox.checked = state;
+          toggleOptionStyling(checkbox.checked, option);
+        });
+      }
+
+      // Toggle styling
+      toggleOptionStyling(checkbox.checked, option);
     });
   });
 });
@@ -90,5 +94,14 @@ function navigate(close, open) {
     // Open the homepage by resetting transform properties
     document.getElementById(close).style.transform = 'translateX(0px)';
     document.getElementById(open).style.transform = 'translateX(0px)';
+  }
+}
+
+function toggleOptionStyling(state, option) {
+  if (!state) {
+    option.classList.add('option-disabled');
+  }
+  else {
+    option.classList.remove('option-disabled');
   }
 }

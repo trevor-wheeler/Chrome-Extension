@@ -5,13 +5,37 @@
     "version": "2.0.0",
     "description": "Block and remove short form content from YouTube, Instagram, and FaceBook.",
     "icons": {
-        "48": "icon.png"
+        "48": "/media/icon.png"
     },
     "action": {
         "default_popup": "popup.html"
     },
     "permissions": [
         "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["/scripts/content/youtube.js", "/scripts/utils.js"]
+        },
+        {
+            "matches": ["https://www.instagram.com/*"],
+            "js": ["/scripts/content/instagram.js", "/scripts/utils.js"]
+        },
+        {
+            "matches": ["https://www.facebook.com/*"],
+            "js": ["/scripts/content/facebook.js", "/scripts/utils.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["data/defaultconfig.json"],
+            "matches": [
+                "https://www.youtube.com/*",
+                "https://www.instagram.com/*",
+                "https://www.facebook.com/*"
+            ]
+        }
     ],
     "host_permissions": [
         "https://www.youtube.com/",
