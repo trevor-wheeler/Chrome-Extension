@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "Focus - Short Form Content Blocker",
+    "name": "Focus - Short-Form Content Blocker",
     "short_name": "Focus",
     "version": "2.0.0",
-    "description": "Block and remove short form content from YouTube, Instagram, and FaceBook.",
+    "description": "Remove Reels and Shorts from YouTube, Instagram, and FaceBook.",
     "icons": {
         "48": "/media/icon.png"
     },
