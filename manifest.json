@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
-    "name": "Short-form Content Removal Tool",
-    "short_name": "Remover",
-    "version": "1.0.0",
-    "description": "Remove Instagram Reels and Youtube Shorts",
+    "name": "Focus - Short-Form Content Blocker",
+    "short_name": "Focus",
+    "version": "2.0.0",
+    "description": "Remove Reels and Shorts from YouTube, Instagram, and FaceBook.",
     "icons": {
-        "48": "icon.png"
+        "48": "/media/icon.png"
     },
     "action": {
         "default_popup": "popup.html"
@@ -15,24 +15,31 @@
     ],
     "content_scripts": [
         {
-            "matches": [
-                "https://www.instagram.com/*"
-            ],
-            "js": [
-                "instagram.js"
-            ]
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["/scripts/content/youtube.js", "/scripts/utils.js"]
         },
         {
+            "matches": ["https://www.instagram.com/*"],
+            "js": ["/scripts/content/instagram.js", "/scripts/utils.js"]
+        },
+        {
+            "matches": ["https://www.facebook.com/*"],
+            "js": ["/scripts/content/facebook.js", "/scripts/utils.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["data/defaultconfig.json"],
             "matches": [
-                "https://www.youtube.com/*"
-            ],
-            "js": [
-                "youtube.js"
+                "https://www.youtube.com/*",
+                "https://www.instagram.com/*",
+                "https://www.facebook.com/*"
             ]
         }
     ],
     "host_permissions": [
         "https://www.youtube.com/",
-        "https://www.instagram.com/"
+        "https://www.instagram.com/",
+        "https://www.facebook.com/"
     ]
 }
