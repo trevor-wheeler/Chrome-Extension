@@ -1,6 +1,6 @@
 function main() {
-  const reelsPage = document.querySelector('.x1i10hfl[href="/reels/"]').parentElement.parentElement.parentElement;
-  const explorePage = document.querySelector('.x1i10hfl[href="/explore/"]').parentElement.parentElement.parentElement;
+  const reelsPage = document.querySelector('.x1i10hfl[href="/reels/"]')?.parentElement.parentElement.parentElement;
+  const explorePage = document.querySelector('.x1i10hfl[href="/explore/"]')?.parentElement.parentElement.parentElement;
 
   const reelsInDMs = Array.from(document.querySelectorAll('.x1ey2m1c.xds687c.x17qophe.x10l6tqk.x13vifvy.x6m44yg'))
   .map(result => result.parentElement.parentElement.parentElement);
