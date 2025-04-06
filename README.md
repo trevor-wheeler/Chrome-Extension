@@ -7,29 +7,29 @@ Works as a Shorts blocker, Reels remover, and a general social media productivit
 [Download in Chrome Web Store](https://chromewebstore.google.com/detail/short-form-content-remova/bbobcnmcegmkheaimcepkmcmnaaomagn)
 
 #### Features for YouTube
-🚫 Block Shorts
-🚫 Hide Shorts page
+🚫 Block Shorts  
+🚫 Hide Shorts page  
 🚫 Remove Shorts from search results
 
 #### Features for Instagram
-🚫 Block Reels
-🚫 Hide Reels page
-🚫 Hide Explore page
+🚫 Block Reels  
+🚫 Hide Reels page  
+🚫 Hide Explore page  
 🚫 Blur Reels in DMs
 
 #### Features for Facebook
-🚫 Block Reels
-🚫 Hide Reels page
+🚫 Block Reels  
+🚫 Hide Reels page  
 🚫 Blur Reels in Facebook Messenger
 
 # Changelog 📣
 
 #### April 5th 2025 - v2.0.0
-🆕 Rebranded to Focus
-🎨 Massive UI makeover
-⚙️ Added separate config pages for each website
-✨ Added Facebook compatibility
-✨ Added ability to block Shorts from search results
+🆕 Rebranded to Focus  
+🎨 Massive UI makeover  
+⚙️ Added separate config pages for each website  
+✨ Added Facebook compatibility  
+✨ Added ability to block Shorts from search results  
 ✨ Added ability to blur out Reels in DMs
 
 #### Feb 4th 2024 - v1.1.0
