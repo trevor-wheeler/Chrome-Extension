@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Focus - Short-Form Content Blocker",
+    "short_name": "Focus",
+    "version": "2.1.0",
+    "description": "Remove Reels and Shorts from YouTube, Instagram, and FaceBook.",
+    "icons": {
+        "48": "/media/icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["main.js", "utils.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["defaultconfig.json"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
